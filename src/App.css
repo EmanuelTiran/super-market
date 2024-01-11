@@ -1,0 +1,51 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.cartList {
+  text-align: center;
+  position: fixed;
+  top: 720px; /* שים לב שאני מניח כאן שאתה רוצה לקבוע את הגובה מלמעלה */
+  left: 0%;
+  width: 100%;
+  border: 2px solid #cccccc;
+  padding: 10px;
+  margin: 10px;
+  height: 170px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: auto;
+  backdrop-filter: blur(10px);
+}
+.cart{
+  border: 2px solid #b800fb;
+  margin: 2px;
+  width: 120px;
+  display: inline-block;
+}
+.item{
+  border: 2px solid rgb(23, 119, 7);
+  background-color: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  width: 150px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(23, 119, 7);
+  transition: transform 0.5s ease-in-out;
+}
+.itemList {
+  border: 10px solid rgb(255, 132, 0);
+  text-align: center;
+  background-color: rgb(255, 132, 0, 0.5);
+  width: 750px;
+  display: inline-block;
+}
+.item:hover {
+  transform: translateY(-150px);
+}
+
