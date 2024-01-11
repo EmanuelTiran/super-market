@@ -7,17 +7,21 @@
 .cartList {
   text-align: center;
   position: fixed;
-  top: 720px; /* שים לב שאני מניח כאן שאתה רוצה לקבוע את הגובה מלמעלה */
+  top: 50px; /* שים לב שאני מניח כאן שאתה רוצה לקבוע את הגובה מלמעלה */
   left: 0%;
-  width: 100%;
+  width: 300px;
   border: 2px solid #cccccc;
   padding: 10px;
   margin: 10px;
-  height: 170px;
+  height: 750px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   overflow: auto;
   backdrop-filter: blur(10px);
+  /* position: relative; */
+}
+.total{
+  /* position: absolute; */
 }
 .cart{
   border: 2px solid #b800fb;
@@ -46,6 +50,6 @@
   display: inline-block;
 }
 .item:hover {
-  transform: translateY(-150px);
+  transform: scale(1.1);
 }
 

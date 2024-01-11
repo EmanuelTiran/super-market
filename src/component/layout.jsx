@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './header';
 import Content from './content';
 import ItemList from './itemList';
-export default function Layout({count,setCount }) {
+export default function Layout() {
   return (
-<ItemList count={count} setCount={setCount} />  )
+<ItemList  />  )
 }

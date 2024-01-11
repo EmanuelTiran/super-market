@@ -3,14 +3,16 @@ import { useState } from "react";
 import "./App.css";
 import Layout from "./component/layout";
 import CartList from "./component/CartList";
-
+import DataContext from "./component/DataContext";
 function App() {
-  const [count, setCount] = useState({});
+  const [cart, setCart] = useState({});
 
   return (
     <div className="app">
-      <Layout count={count} setCount={setCount} />
-      <CartList count={count} setCount={setCount} />
+      <DataContext.Provider value={{ cart, setCart }}>
+        <Layout  />
+        <CartList />
+      </DataContext.Provider>
     </div>
   );
 }
