@@ -42,7 +42,7 @@ export default function CartItem({ cartItem }) {
       <p>Price: ${cartItem.price}</p>
       <p>Amount:{cartItem.amount}</p>
       <button onClick={() => plus(cartItem.id)}>+</button>
-      <button onClick={() => remove(cartItem.id)} >remove</button>
+      <button onClick={() => remove(cartItem.id)} >❌</button>
       <button onClick={() => minus(cartItem.id)}>-</button>
     </div>
   );

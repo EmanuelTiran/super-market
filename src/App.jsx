@@ -1,20 +1,27 @@
-import { useState } from "react";
-
 import "./App.css";
 import Layout from "./component/layout";
-import CartList from "./component/CartList";
-import DataContext from "./component/DataContext";
+
+import { BrowserRouter } from "react-router-dom";
+
 function App() {
-  const [cart, setCart] = useState({});
 
   return (
     <div className="app">
-      <DataContext.Provider value={{ cart, setCart }}>
-        <Layout  />
-        <CartList />
-      </DataContext.Provider>
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+{/* <BrowserRouter>
+<Routes>
+  <Route path="/categories" element={<Categories />} />
+  <Route
+    path="/categories/:catName/:a/:b"
+    element={<ItemList catName={params.catName} />}
+  />
+  <Route path="/item/:itemId" element={<ItemDetails itemId={params.itemId} />} />
+</Routes>
+</BrowserRouter> */}

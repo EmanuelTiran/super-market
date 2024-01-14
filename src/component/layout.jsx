@@ -1,8 +1,16 @@
-import React from 'react'
-import Header from './header';
+import React, { useState } from 'react'
 import Content from './content';
-import ItemList from './itemList';
+import CartList from './CartList';
+import DataContext from './DataContext';
 export default function Layout() {
+  const [cart, setCart] = useState({});
   return (
-<ItemList  />  )
+    <>
+      <h1>super market</h1>
+      <DataContext.Provider value={{ cart, setCart }}>
+        <Content />
+        <CartList />
+      </DataContext.Provider>
+
+    </>)
 }

@@ -1,13 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Nabla&family=Nanum+Gothic&display=swap');
+
+h1 {
+  font-family: 'Alumni Sans Collegiate One', sans-serif;
+  font-family: 'Nabla', system-ui;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+::-webkit-scrollbar {
+  /* appearance: default;
+  background-color: #f80000;
+  border: 1px solid #ccc;
+  border-radius: 5px; */
+  /* border-radius: 10px; */
+}
+::-webkit-scrollbar-thumb {
+  
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
+h1 {
+  font-family: 'Alumni Sans Collegiate One', sans-serif;
+  font-family: 'Nabla', system-ui;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
 .cartList {
   text-align: center;
   position: fixed;
-  top: 50px; /* שים לב שאני מניח כאן שאתה רוצה לקבוע את הגובה מלמעלה */
+  top: 50px;
+  /* שים לב שאני מניח כאן שאתה רוצה לקבוע את הגובה מלמעלה */
   left: 0%;
   width: 300px;
   border: 2px solid #cccccc;
@@ -20,16 +45,17 @@
   backdrop-filter: blur(10px);
   /* position: relative; */
 }
-.total{
-  /* position: absolute; */
-}
-.cart{
+
+/* .total{
+} */
+.cart {
   border: 2px solid #b800fb;
   margin: 2px;
   width: 120px;
   display: inline-block;
 }
-.item{
+
+.item {
   border: 2px solid rgb(23, 119, 7);
   background-color: rgb(255, 255, 255);
   margin-left: auto;
@@ -42,6 +68,7 @@
   box-shadow: 0 4px 8px rgba(23, 119, 7);
   transition: transform 0.5s ease-in-out;
 }
+
 .itemList {
   border: 10px solid rgb(255, 132, 0);
   text-align: center;
@@ -49,7 +76,7 @@
   width: 750px;
   display: inline-block;
 }
+
 .item:hover {
   transform: scale(1.1);
 }
-

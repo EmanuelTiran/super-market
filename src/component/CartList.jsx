@@ -7,12 +7,11 @@ export default function CartList() {
   const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
-    let calculatedTotalAmount = 0;
+    let sum = 0;
     Object.values(cart).forEach(item => {
-      calculatedTotalAmount += item.amount;
+      sum += (item.amount*item.price)
     });
-    let bbb = 0;
-    setTotalAmount(calculatedTotalAmount);
+    setTotalAmount(sum.toFixed(2));
   }, [cart]);
 
   return (
