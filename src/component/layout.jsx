@@ -6,7 +6,7 @@ export default function Layout() {
   const [cart, setCart] = useState({});
   return (
     <>
-      <h1>super market</h1>
+      <h1 className="h12">super market</h1>
       <DataContext.Provider value={{ cart, setCart }}>
         <Content />
         <CartList />

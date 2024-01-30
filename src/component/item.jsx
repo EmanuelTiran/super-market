@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import DataContext from "./DataContext";
 import { useContext } from "react";
-export default function Item({ fruit }) {
+export default function Item({ fruit ,catName}) {
   const [amount, setAmount] = useState(0);
   const { cart, setCart } = useContext(DataContext);
 
@@ -19,10 +19,10 @@ export default function Item({ fruit }) {
   };
 
   return (
-    <div key={fruit.id} className="item">
+    <div key={fruit.id} className="item" id={`${catName}`}>
       <h2>{fruit.name}</h2>
-      <p>Emoji: {fruit.emoji}</p>
-      <p>Price: ${fruit.price}</p>
+      {/* <p>{fruit.emoji}</p> */}
+      <p> ${fruit.price}</p>
       <img
         src={fruit.image}
         alt={fruit.name}

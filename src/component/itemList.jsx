@@ -6,22 +6,26 @@ import { useParams } from "react-router-dom";
 
 
 export default function ItemList() {
-  const { catName } = useParams();
-  const [items,setItems ] = useState([])
+  const { catName, id } = useParams();
+  const [items, setItems] = useState([])
 
-  useEffect(()=>{
+  useEffect(() => {
     // fetch('https://jbh-mockserver.onrender.com/categories/fruits')
     // .then(j=>j.json())
     // .then(data=>setItems(data))
+    let idn = parseInt(id);
+    setItems(id ? data[catName][idn]: data[catName])
+    console.log(items);
+    console.log("idn",  idn);
+    console.log("id",  id);
+  }, [catName])
 
-    setItems(data[catName])
-  },[])
   return (
-    <div className="itemList">
-      <h1>Fruits & vegetables</h1>
-      {items.map((f, index) => (
-        <Item key={f.id} num={index} fruit={f}/>
-      ))}
+    <div className={`${catName} itemList `}    >
+      <h1 className="h1">{catName}</h1>
+      {items.length ? items.map((f, index) => (
+        <Item key={f.id} num={index} fruit={f} catName={catName} />
+      )) : <Item fruit={items} catName={catName}/>}
     </div>
   );
 }
